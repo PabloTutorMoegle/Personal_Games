@@ -18,6 +18,10 @@ public class CastleController : MonoBehaviour
                 Debug.Log("Player has reached the castle with required items. Game Finished!");
                 GameFinished?.Invoke();
             }
+            else
+            {
+                Debug.Log("Player reached the castle but is missing required items.");
+            }
         }
     }
 }
