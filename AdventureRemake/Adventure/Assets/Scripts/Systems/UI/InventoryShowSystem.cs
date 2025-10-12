@@ -7,9 +7,18 @@ public class InventoryShowSystem : MonoBehaviour
     public PlayerController player;
     public List<SlotsSystem> slots = new List<SlotsSystem>();
 
+    private void LateUpdate()
+    {
+        SetUp();
+    }
+    
     void SetUp()
     {
-        for (int i = 0; i < slots.Count; i++)
+        int itemCount = player.GetPlayerInventory().GetAllItems().Count;
+        int slotCount = slots.Count;
+        int minCount = Mathf.Min(itemCount, slotCount);
+
+        for (int i = 0; i < minCount; i++)
         {
             if (player.GetPlayerInventory().GetAllItems()[i] != null)
             {
@@ -19,6 +28,12 @@ public class InventoryShowSystem : MonoBehaviour
             {
                 slots[i].ClearSlot();
             }
+        }
+
+        // Clear remaining slots if there are more slots than items
+        for (int i = minCount; i < slotCount; i++)
+        {
+            slots[i].ClearSlot();
         }
     }
 }
