@@ -14,8 +14,9 @@ public class SlotsSystem : MonoBehaviour
         if (item != null)
         {
             itemIcon.sprite = item.Icon;
-            itemIcon.color = Color.white;
+            itemIcon.color = new Color(1, 1, 1, 1);
             itemQuantityText.text = item.Quantity.ToString();
+            itemQuantityText.color = Color.black;
         }
     }
     public void ClearSlot()

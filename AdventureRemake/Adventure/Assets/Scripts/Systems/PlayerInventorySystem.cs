@@ -31,6 +31,7 @@ public class PlayerInventorySystem : MonoBehaviour
         {
             items[itemType] = new InventoryItem(itemType, amount, icon);
         }
+        SortAlphabetically();
     }
 
     public bool RemoveItem(string itemType, int amount = 1)
@@ -66,4 +67,9 @@ public class PlayerInventorySystem : MonoBehaviour
         return new List<InventoryItem>(items.Values);
     }
 
+    private void SortAlphabetically()
+    {
+        var sortedItems = new SortedDictionary<string, InventoryItem>(items);
+        items = new Dictionary<string, InventoryItem>(sortedItems);
+    }
 }
