@@ -37,7 +37,6 @@ public class PlayerController : MonoBehaviour
         _hb.setMaxHealth(maxHealth);
         _hs.SetHealth(maxHealth);
         currentHealth = _hs.GetCurrentHealth();
-        Debug.Log("Player Health: " + currentHealth);
     }
 
     private void Update()

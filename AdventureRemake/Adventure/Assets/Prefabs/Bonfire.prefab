@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 6413038640460697579}
   - component: {fileID: 6756013304134892030}
   - component: {fileID: 547864569936432163}
-  - component: {fileID: 4100998812811569243}
-  - component: {fileID: 7034354394010562633}
+  - component: {fileID: 6912700548810561762}
   m_Layer: 0
   m_Name: Bonfire
   m_TagString: Untagged
@@ -139,7 +138,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 8.5, y: 4.5}
   m_EdgeRadius: 0
---- !u!114 &4100998812811569243
+--- !u!114 &6912700548810561762
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,29 +147,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5624872284916139180}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26d5329d30fea0f13985826df2834536, type: 3}
+  m_Script: {fileID: 11500000, guid: 73921b33ecda3e49d9a4de0e2920f257, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
-  maxhealth: 0
-  health: 0
-  OnChangeHealth:
-    m_PersistentCalls:
-      m_Calls: []
-  UpdateHearts:
-    m_PersistentCalls:
-      m_Calls: []
-  OnZeroLifes:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &7034354394010562633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5624872284916139180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0b8f60978857449e8d4815ffe94a90a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BonfireController
+  m_EditorClassIdentifier: Assembly-CSharp::HealSystem
+  healAmount: 100
