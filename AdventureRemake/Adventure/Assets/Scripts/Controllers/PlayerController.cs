@@ -71,8 +71,27 @@ public class PlayerController : MonoBehaviour
         float vertical = moveDirection.y;
         moveDirection = new Vector3(horizontal, vertical, 0).normalized;
         _mv.MoveLinearVelocity(moveDirection, moveSpeed);
-    }
 
+        //Consume Potions
+        if (Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            if (_pi.HasItem("Potion"))
+            {
+                bool removed = _pi.RemoveItem("Potion", 1);
+                if (removed)
+                {
+                    _hs.Heal(50);
+                    currentHealth = _hs.GetCurrentHealth();
+                    _hb.setHealth(currentHealth);
+                    Debug.Log("Consumed a Potion. Current Health: " + currentHealth);
+                }
+            }
+            else
+            {
+                Debug.Log("No Potions in inventory.");
+            }
+        }
+    }
     public PlayerInventorySystem GetPlayerInventory()
     {
         return _pi;

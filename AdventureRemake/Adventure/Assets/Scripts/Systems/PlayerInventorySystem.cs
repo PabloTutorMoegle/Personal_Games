@@ -34,7 +34,7 @@ public class PlayerInventorySystem : MonoBehaviour
         SortAlphabetically();
     }
 
-    public bool RemoveItem(string itemType, int amount = 1)
+    public bool RemoveItem(string itemType, int amount)
     {
         if (items.ContainsKey(itemType) && items[itemType].Quantity >= amount)
         {
