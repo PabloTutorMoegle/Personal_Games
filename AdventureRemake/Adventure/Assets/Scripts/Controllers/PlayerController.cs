@@ -14,9 +14,6 @@ public class PlayerController : MonoBehaviour
     //Health variables
     public float maxHealth = 100;
     public float currentHealth;
-    public float healBonfireAmount = 100;
-    public float healFoodAmount = 20;
-    public float damageAmount = 20;
 
     //Movement variables
     public float moveSpeed = 5f;
@@ -98,39 +95,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
-        BonfireController.HealBonfire += HealFromBonfire;
-        FoodController.HealFood += HealFromFood;
-        SnakeController.SnakeDamage += DamageFromSnake;
         CollectibleSystem.GetCollectible += AddToInventory;
     }
     private void OnDisable()
     {
-        BonfireController.HealBonfire -= HealFromBonfire;
-        FoodController.HealFood -= HealFromFood;
-        SnakeController.SnakeDamage -= DamageFromSnake;
         CollectibleSystem.GetCollectible -= AddToInventory;
-    }
-    private void HealFromBonfire()
-    {
-        _hs.Heal(healBonfireAmount);
-        currentHealth = _hs.GetCurrentHealth();
-        _hb.setHealth(currentHealth);
-    }
-    private void HealFromFood()
-    {
-        _hs.Heal(healFoodAmount);
-        currentHealth = _hs.GetCurrentHealth();
-        _hb.setHealth(currentHealth);
-    }
-    private void DamageFromSnake()
-    {
-        _hs.Hurt(damageAmount);
-        currentHealth = _hs.GetCurrentHealth();
-        _hb.setHealth(currentHealth);
     }
     private void AddToInventory(string collectibleType, int amount, Sprite icon)
     {
         _pi.AddItem(collectibleType, amount, icon);
-        Debug.Log("Added to Inventory: " + collectibleType + " x" + amount);
     }
 }

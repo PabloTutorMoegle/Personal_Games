@@ -64,5 +64,6 @@ public class HealthSystem : MonoBehaviour
         {
             health += heal;
         }
+        OnChangeHealth.Invoke(health);
     }
 }

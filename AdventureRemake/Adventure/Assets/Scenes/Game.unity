@@ -1048,6 +1048,9 @@ GameObject:
   - component: {fileID: 529123498}
   - component: {fileID: 529123506}
   - component: {fileID: 529123507}
+  - component: {fileID: 529123509}
+  - component: {fileID: 529123508}
+  - component: {fileID: 529123510}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1085,13 +1088,37 @@ MonoBehaviour:
   health: 0
   OnChangeHealth:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 529123506}
+        m_TargetAssemblyTypeName: HealthBarSystem, Assembly-CSharp
+        m_MethodName: setHealth
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   UpdateHearts:
     m_PersistentCalls:
       m_Calls: []
   OnZeroLifes:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 529123508}
+        m_TargetAssemblyTypeName: DestroySystem, Assembly-CSharp
+        m_MethodName: DestroyObj
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &529123500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1106,9 +1133,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   maxHealth: 100
   currentHealth: 0
-  healBonfireAmount: 100
-  healFoodAmount: 20
-  damageAmount: 20
   moveSpeed: 7
   moveDirection: {x: 0, y: 0, z: 0}
 --- !u!50 &529123502
@@ -1304,6 +1328,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d25404aab7c338bbc996b8bdb80a562f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventorySystem
+--- !u!114 &529123508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529123497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d2e4634f4aae61158dd750d157742c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroySystem
+  FX: {fileID: 0}
+--- !u!114 &529123509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529123497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27906ac5fd2828936bcc2c21e939726b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageSystem
+  damageAmount: 10
+--- !u!114 &529123510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529123497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66a5887ac47fa621ae4f0f4ce162f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionSystem
+  OnCollide:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 529123509}
+        m_TargetAssemblyTypeName: DamageSystem, Assembly-CSharp
+        m_MethodName: DoDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &532817145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12151,6 +12231,10 @@ PrefabInstance:
     - target: {fileID: 2330365634507152132, guid: d86ea983583d203f58fca2e2ceabfd6a, type: 3}
       propertyPath: m_Name
       value: ChikenWing (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161728432357275463, guid: d86ea983583d203f58fca2e2ceabfd6a, type: 3}
+      propertyPath: healAmount
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -53563,6 +53647,9 @@ GameObject:
   - component: {fileID: 2056263302}
   - component: {fileID: 2056263301}
   - component: {fileID: 2056263305}
+  - component: {fileID: 2056263306}
+  - component: {fileID: 2056263308}
+  - component: {fileID: 2056263307}
   m_Layer: 0
   m_Name: Snake
   m_TagString: Untagged
@@ -53752,7 +53839,75 @@ MonoBehaviour:
       m_Calls: []
   OnZeroLifes:
     m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2056263306}
+        m_TargetAssemblyTypeName: DestroySystem, Assembly-CSharp
+        m_MethodName: DestroyObj
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2056263306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056263299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d2e4634f4aae61158dd750d157742c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroySystem
+  FX: {fileID: 0}
+--- !u!114 &2056263307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056263299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27906ac5fd2828936bcc2c21e939726b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageSystem
+  damageAmount: 20
+--- !u!114 &2056263308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056263299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66a5887ac47fa621ae4f0f4ce162f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionSystem
+  OnCollide:
+    m_PersistentCalls:
       m_Calls: []
+  OnTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2056263307}
+        m_TargetAssemblyTypeName: DamageSystem, Assembly-CSharp
+        m_MethodName: DoDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &2056803697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1800020427437985061, guid: 6af4522043fa9c9a3b7b6ddc8f065ff2, type: 3}

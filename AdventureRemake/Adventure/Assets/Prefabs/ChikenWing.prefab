@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 455504954445309730}
   - component: {fileID: 822924116164213792}
   - component: {fileID: 539679806358715413}
-  - component: {fileID: 4685044198850512217}
+  - component: {fileID: 603678344923633599}
+  - component: {fileID: 8161728432357275463}
+  - component: {fileID: 6866826218617835728}
   m_Layer: 0
   m_Name: ChikenWing
   m_TagString: Untagged
@@ -156,7 +158,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.41
---- !u!114 &4685044198850512217
+--- !u!114 &603678344923633599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,6 +167,62 @@ MonoBehaviour:
   m_GameObject: {fileID: 2330365634507152132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dd3b33daf64ca6018273741dbfe390e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d2e4634f4aae61158dd750d157742c8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FoodController
+  m_EditorClassIdentifier: Assembly-CSharp::DestroySystem
+  FX: {fileID: 0}
+--- !u!114 &8161728432357275463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2330365634507152132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73921b33ecda3e49d9a4de0e2920f257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealSystem
+  healAmount: 20
+--- !u!114 &6866826218617835728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2330365634507152132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66a5887ac47fa621ae4f0f4ce162f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionSystem
+  OnCollide:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8161728432357275463}
+        m_TargetAssemblyTypeName: HealSystem, Assembly-CSharp
+        m_MethodName: DoHeal
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 603678344923633599}
+        m_TargetAssemblyTypeName: DestroySystem, Assembly-CSharp
+        m_MethodName: DestroyObj
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

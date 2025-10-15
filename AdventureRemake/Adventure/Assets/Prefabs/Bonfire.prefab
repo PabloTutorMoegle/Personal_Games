@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6413038640460697579}
   - component: {fileID: 6756013304134892030}
   - component: {fileID: 547864569936432163}
-  - component: {fileID: 6912700548810561762}
+  - component: {fileID: 990754588190221543}
+  - component: {fileID: 3673620401569195641}
   m_Layer: 0
   m_Name: Bonfire
   m_TagString: Untagged
@@ -138,7 +139,37 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 8.5, y: 4.5}
   m_EdgeRadius: 0
---- !u!114 &6912700548810561762
+--- !u!114 &990754588190221543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5624872284916139180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66a5887ac47fa621ae4f0f4ce162f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionSystem
+  OnCollide:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3673620401569195641}
+        m_TargetAssemblyTypeName: HealSystem, Assembly-CSharp
+        m_MethodName: DoHeal
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3673620401569195641
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
