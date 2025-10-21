@@ -7,7 +7,6 @@ public class HealSystem : MonoBehaviour
     public float healAmount = 1.0f;
 
     public void DoHeal(GameObject gameObject){
-        Debug.Log("Healing " + gameObject.name);
         if (gameObject.TryGetComponent<HealthSystem>(out HealthSystem hs))
             hs.Heal(healAmount);
     }
