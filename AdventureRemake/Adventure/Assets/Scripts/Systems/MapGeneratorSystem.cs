@@ -87,11 +87,6 @@ public class MapGenerator : MonoBehaviour
                 {
                     Instantiate(prefabDict[tile], position, Quaternion.identity);
                     mapData.Add(tile);
-                    //mover camara a posicion solo si tile es 1
-                    if (tile == 1)
-                    {
-                        Camera.main.transform.position = new Vector3(position.x, position.y, -10);
-                    }
                 }
             }
         }
