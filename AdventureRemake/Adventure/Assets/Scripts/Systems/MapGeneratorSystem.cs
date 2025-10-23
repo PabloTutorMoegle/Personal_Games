@@ -28,6 +28,17 @@ public class MapGenerator : MonoBehaviour
     private void Start()
     {
         GenerateMap();
+        setCameraPosition();
+    }
+
+    private void setCameraPosition()
+    {
+        //define camera position based on where the prefab number 1 is located
+        GameObject playerStart = GameObject.FindWithTag("Player");
+        if (playerStart != null)
+        {
+            Camera.main.transform.position = new Vector3(playerStart.transform.position.x, playerStart.transform.position.y, Camera.main.transform.position.z);
+        }   
     }
 
     void GenerateMap()
