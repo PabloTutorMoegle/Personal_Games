@@ -15,6 +15,7 @@ public class MapGenerator : MonoBehaviour
     private Dictionary<int, GameObject> prefabDict;
     private ArrayList mapData;
     private Vector3 position = Vector3.zero;
+    private ArrayList mapFiles = new ArrayList() { "map1.txt", "map2.txt" };
 
     private void Awake()
     {
@@ -28,23 +29,15 @@ public class MapGenerator : MonoBehaviour
     private void Start()
     {
         GenerateMap();
-        setCameraPosition();
-    }
-
-    private void setCameraPosition()
-    {
-        //define camera position based on where the prefab number 1 is located
-        GameObject playerStart = GameObject.FindWithTag("Player");
-        if (playerStart != null)
-        {
-            Camera.main.transform.position = new Vector3(playerStart.transform.position.x, playerStart.transform.position.y, Camera.main.transform.position.z);
-        }   
     }
 
     void GenerateMap()
     {
         mapData = new ArrayList();
-        string path = Application.dataPath + "/Resources/map1.txt";
+        
+        //Pick random map file
+        string path = Application.dataPath + "/Resources/" + mapFiles[Random.Range(0, mapFiles.Count)];
+        
         if (!System.IO.File.Exists(path))
         {
             Debug.LogError("Map file not found at: " + path);

@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class CamController : MonoBehaviour
 {
     public Transform player;
@@ -7,9 +8,11 @@ public class CamController : MonoBehaviour
     private Vector3 targetPos, newPos;
     public Vector3 minPos, maxPos;
 
+
+
     private void LateUpdate()
     {
-        if(transform.position != player.position)
+        if (transform.position != player.position)
         {
             targetPos = player.position;
 
@@ -18,7 +21,7 @@ public class CamController : MonoBehaviour
                 Mathf.Clamp(targetPos.y, minPos.y, maxPos.y),
                 Mathf.Clamp(targetPos.z, minPos.z, maxPos.z)
             );
-            
+
             newPos = Vector3.Lerp(transform.position, camBoundryPos, smoothSpeed);
             transform.position = newPos;
         }
