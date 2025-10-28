@@ -2753,6 +2753,7 @@ Transform:
   - {fileID: 1376860273778375749}
   - {fileID: 5485823549187495003}
   - {fileID: 1704568984555022447}
+  - {fileID: 32717768399922059}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7301623517513111521
@@ -2801,6 +2802,107 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!1001 &1469802954725266413
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3093574179387478707}
+    m_Modifications:
+    - target: {fileID: 999946228253829938, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+      propertyPath: m_Name
+      value: Snake
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446206734831595622, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.2127037
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446206734831595622, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2595537
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446206734831595622, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446206734831595622, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446206734831595622, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446206734831595622, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446206734831595622, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446206734831595622, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446206734831595622, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446206734831595622, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254523695433502529, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293723293435055502, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+      propertyPath: OnChangeHealth.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293723293435055502, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+      propertyPath: OnChangeHealth.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3196426846695649538}
+    - target: {fileID: 7293723293435055502, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+      propertyPath: OnChangeHealth.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293723293435055502, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+      propertyPath: OnChangeHealth.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setHealth
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293723293435055502, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+      propertyPath: OnChangeHealth.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HealthBarSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293723293435055502, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+      propertyPath: OnChangeHealth.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+--- !u!4 &32717768399922059 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1446206734831595622, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+  m_PrefabInstance: {fileID: 1469802954725266413}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3196426846695649538 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4052734679120929519, guid: 30519d3c78dd392c698912b1b10d3771, type: 3}
+  m_PrefabInstance: {fileID: 1469802954725266413}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1053349cf72818261ac97c1992a6e7f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthBarSystem
 --- !u!1001 &1696848704623960387
 PrefabInstance:
   m_ObjectHideFlags: 0

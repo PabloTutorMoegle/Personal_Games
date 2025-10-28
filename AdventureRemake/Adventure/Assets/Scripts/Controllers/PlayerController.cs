@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     private HealthSystem _hs;
     private HealthBarSystem _hb;
     private PlayerInventorySystem _pi;
+    private Animator _anim;
+    private SpriteRenderer _sr;
 
     //Health variables
     public float maxHealth = 100;
@@ -26,6 +28,8 @@ public class PlayerController : MonoBehaviour
         TryGetComponent<HealthSystem>(out _hs);
         TryGetComponent<HealthBarSystem>(out _hb);
         TryGetComponent<PlayerInventorySystem>(out _pi);
+        TryGetComponent<Animator>(out _anim);
+        TryGetComponent<SpriteRenderer>(out _sr);
     }
 
     private void Start()
@@ -54,15 +58,18 @@ public class PlayerController : MonoBehaviour
         if (Keyboard.current.aKey.isPressed)
         {
             moveDirection.x = -1;
+            _sr.flipX = true;
         }
         else if (Keyboard.current.dKey.isPressed)
         {
             moveDirection.x = 1;
+            _sr.flipX = false;
         }
         else
         {
             moveDirection.x = 0;
         }
+
         float horizontal = moveDirection.x;
         float vertical = moveDirection.y;
         moveDirection = new Vector3(horizontal, vertical, 0).normalized;
