@@ -70,6 +70,14 @@ public class PlayerController : MonoBehaviour
             moveDirection.x = 0;
         }
 
+        //attack animation
+        //la animacion tiene una duracion de 1 segundo y luego vuelve a idle
+        if (Keyboard.current.jKey.wasPressedThisFrame)
+        {
+            _anim.SetBool("isIdle", false);
+            _anim.SetBool("isAttacking", true);
+        }
+
         float horizontal = moveDirection.x;
         float vertical = moveDirection.y;
         moveDirection = new Vector3(horizontal, vertical, 0).normalized;
@@ -95,6 +103,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+        
     public PlayerInventorySystem GetPlayerInventory()
     {
         return _pi;

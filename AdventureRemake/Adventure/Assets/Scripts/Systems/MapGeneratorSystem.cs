@@ -15,7 +15,7 @@ public class MapGenerator : MonoBehaviour
     private Dictionary<int, GameObject> prefabDict;
     private ArrayList mapData;
     private Vector3 position = Vector3.zero;
-    private ArrayList mapFiles = new ArrayList() { "map1.txt", "map2.txt" };
+    private ArrayList mapFiles = new ArrayList() { "map1.txt", "map2.txt", "map3.txt" };
 
     private void Awake()
     {
