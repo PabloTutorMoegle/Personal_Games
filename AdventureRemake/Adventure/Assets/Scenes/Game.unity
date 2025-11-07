@@ -584,7 +584,7 @@ GameObject:
   m_Layer: 0
   m_Name: MapGenerator
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -635,6 +635,8 @@ MonoBehaviour:
     prefab: {fileID: 1902864880115467013, guid: 29a2f1faa5df1c97ca208e539947f560, type: 3}
   - num: 16
     prefab: {fileID: 3440232560727875884, guid: 0abe35f9e526758899c6f48b01271933, type: 3}
+  - num: 17
+    prefab: {fileID: 4449382655625175138, guid: c8e44289834de0226a284958a17ee8b0, type: 3}
 --- !u!4 &744299172
 Transform:
   m_ObjectHideFlags: 0

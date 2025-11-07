@@ -1,0 +1,961 @@
+fileFormatVersion: 2
+guid: ddadd6383eac92a8fab67c3271e683f9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5142946182588220944
+    second: v3_TilesetCesped+UnPocoDeAgua_0
+  - first:
+      213: 4267889748635498634
+    second: v3_TilesetCesped+UnPocoDeAgua_1
+  - first:
+      213: -3728467216709760935
+    second: v3_TilesetCesped+UnPocoDeAgua_2
+  - first:
+      213: -3209301618770326670
+    second: v3_TilesetCesped+UnPocoDeAgua_3
+  - first:
+      213: -3051138576346023426
+    second: v3_TilesetCesped+UnPocoDeAgua_4
+  - first:
+      213: -4257639732303154994
+    second: v3_TilesetCesped+UnPocoDeAgua_5
+  - first:
+      213: -5627081639572148990
+    second: v3_TilesetCesped+UnPocoDeAgua_6
+  - first:
+      213: -8798267016773841994
+    second: v3_TilesetCesped+UnPocoDeAgua_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 688
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0164f18fd4a6f5740800000000000000
+      internalID: 5142946182588220944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 688
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8833f73d179a3b30800000000000000
+      internalID: 4267889748635498634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 688
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 958435712d2d14cc0800000000000000
+      internalID: -3728467216709760935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 688
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27bcb1c6e254673d0800000000000000
+      internalID: -3209301618770326670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 688
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef9776461ad28a5d0800000000000000
+      internalID: -3051138576346023426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 688
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec03b7ea833d9e4c0800000000000000
+      internalID: -4257639732303154994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 688
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20ded27ff0798e1b0800000000000000
+      internalID: -5627081639572148990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 688
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bbc82273c646e580800000000000000
+      internalID: -8798267016773841994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 656
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d66d58017fb67f18a1bc55faa18525c
+      internalID: 6011894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 656
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c5da62ae2ea8c82a3db4c90d93a857
+      internalID: 1991394045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 656
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8de88935e5cec2ed98ced02f213eb40
+      internalID: 1306263415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 656
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8542a75fb515ee28afb18372389ddc
+      internalID: 1376468237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 656
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bbe0659f148a81f689b4a61ec0c5671
+      internalID: -1389533730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_13
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 656
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcbac58e0a75c0299f9e93141e44ca2
+      internalID: -1723011701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_14
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 656
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b783af7cb7621fda457a6138c0b1e1
+      internalID: -2124231375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 624
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f90b6c723ef0cf5ed8d22d9c06f5b6f0
+      internalID: -797237511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 624
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a545b3d1903cdb81699395042aefc951
+      internalID: -2051336681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 624
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1e2c2d515d194289dcd8da56f561f5
+      internalID: -710880085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 624
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d10f1a9af65c803ebcbea3f9183eae1
+      internalID: -1341546664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 624
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 493addc737114be27951f78a17e9e77c
+      internalID: -454032227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 624
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9044e265638ff98df9d9c188b7712abb
+      internalID: 823681507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_21
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 624
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02088f958701f8b1a18964d8dd4bdf7
+      internalID: -648615958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_22
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 624
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b788c90a2ce716096a38f9800eabf8da
+      internalID: -481096685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 528
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a702419e4f4c81272abfe66853906e65
+      internalID: 1191721097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_24
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 528
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 364e9be142cb23aaba1f07b51d4f9bd3
+      internalID: 339827629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 528
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f592fcefd7ce13debd8b3f047fe6ddf
+      internalID: -1057997848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_26
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 528
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60f3f5843ff6f0a9a4c7737c3820993
+      internalID: -155941065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 496
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cffaf320dba2e439a57b79f27372114
+      internalID: 675657131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_28
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 496
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b40a2e5bc012f749798db86b754a0d46
+      internalID: 1326434791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_29
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 496
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70b094c1ae9a89a7a0a92149864a30a
+      internalID: -2042179451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_30
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 496
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b10861eaa4faec188148c016d344b26
+      internalID: -1175054716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bba073c1d85478869a84eadfe8ce8a1
+      internalID: -1398895923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_32
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 432
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c25c5ec51bcad76729823388b804694e
+      internalID: 1746204404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_33
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 432
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095382690cb1bad0f97dfcc151e5b0a4
+      internalID: -813369322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v3_TilesetCesped+UnPocoDeAgua_34
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 432
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176685d910b1878ceba5d6aa092468ab
+      internalID: -1557703782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: bebb9bbac8db7775d8ff1dc40be7518c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      v3_TilesetCesped+UnPocoDeAgua_0: 5142946182588220944
+      v3_TilesetCesped+UnPocoDeAgua_1: 4267889748635498634
+      v3_TilesetCesped+UnPocoDeAgua_10: 1306263415
+      v3_TilesetCesped+UnPocoDeAgua_11: 1376468237
+      v3_TilesetCesped+UnPocoDeAgua_12: -1389533730
+      v3_TilesetCesped+UnPocoDeAgua_13: -1723011701
+      v3_TilesetCesped+UnPocoDeAgua_14: -2124231375
+      v3_TilesetCesped+UnPocoDeAgua_15: -797237511
+      v3_TilesetCesped+UnPocoDeAgua_16: -2051336681
+      v3_TilesetCesped+UnPocoDeAgua_17: -710880085
+      v3_TilesetCesped+UnPocoDeAgua_18: -1341546664
+      v3_TilesetCesped+UnPocoDeAgua_19: -454032227
+      v3_TilesetCesped+UnPocoDeAgua_2: -3728467216709760935
+      v3_TilesetCesped+UnPocoDeAgua_20: 823681507
+      v3_TilesetCesped+UnPocoDeAgua_21: -648615958
+      v3_TilesetCesped+UnPocoDeAgua_22: -481096685
+      v3_TilesetCesped+UnPocoDeAgua_23: 1191721097
+      v3_TilesetCesped+UnPocoDeAgua_24: 339827629
+      v3_TilesetCesped+UnPocoDeAgua_25: -1057997848
+      v3_TilesetCesped+UnPocoDeAgua_26: -155941065
+      v3_TilesetCesped+UnPocoDeAgua_27: 675657131
+      v3_TilesetCesped+UnPocoDeAgua_28: 1326434791
+      v3_TilesetCesped+UnPocoDeAgua_29: -2042179451
+      v3_TilesetCesped+UnPocoDeAgua_3: -3209301618770326670
+      v3_TilesetCesped+UnPocoDeAgua_30: -1175054716
+      v3_TilesetCesped+UnPocoDeAgua_31: -1398895923
+      v3_TilesetCesped+UnPocoDeAgua_32: 1746204404
+      v3_TilesetCesped+UnPocoDeAgua_33: -813369322
+      v3_TilesetCesped+UnPocoDeAgua_34: -1557703782
+      v3_TilesetCesped+UnPocoDeAgua_4: -3051138576346023426
+      v3_TilesetCesped+UnPocoDeAgua_5: -4257639732303154994
+      v3_TilesetCesped+UnPocoDeAgua_6: -5627081639572148990
+      v3_TilesetCesped+UnPocoDeAgua_7: -8798267016773841994
+      v3_TilesetCesped+UnPocoDeAgua_8: 6011894
+      v3_TilesetCesped+UnPocoDeAgua_9: 1991394045
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
