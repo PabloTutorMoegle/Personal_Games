@@ -637,6 +637,8 @@ MonoBehaviour:
     prefab: {fileID: 3440232560727875884, guid: 0abe35f9e526758899c6f48b01271933, type: 3}
   - num: 17
     prefab: {fileID: 4449382655625175138, guid: c8e44289834de0226a284958a17ee8b0, type: 3}
+  - num: 18
+    prefab: {fileID: 6081621190657283672, guid: 6813bd39a62a9ecdaa7532dc8340e65d, type: 3}
 --- !u!4 &744299172
 Transform:
   m_ObjectHideFlags: 0
