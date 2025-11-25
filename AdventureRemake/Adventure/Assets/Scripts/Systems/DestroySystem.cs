@@ -21,7 +21,7 @@ public class DestroySystem : MonoBehaviour
         OnDestroy.Invoke();
         Destroy(this.gameObject);
     }
-   
+
     void OnEnable()
     {
         if(TryGetComponent<HealthSystem>(out HealthSystem hs))
