@@ -1020,6 +1020,7 @@ Transform:
   m_Children:
   - {fileID: 4118176671203885467}
   - {fileID: 5093675768475408017}
+  - {fileID: 9010527811763339600}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5625360078174925631
@@ -3477,6 +3478,68 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!1001 &5941336942521062554
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7805749988539433769}
+    m_Modifications:
+    - target: {fileID: 3420498444432774602, guid: 77dacda4afccc24fd93ecd9475746e14, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420498444432774602, guid: 77dacda4afccc24fd93ecd9475746e14, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420498444432774602, guid: 77dacda4afccc24fd93ecd9475746e14, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420498444432774602, guid: 77dacda4afccc24fd93ecd9475746e14, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420498444432774602, guid: 77dacda4afccc24fd93ecd9475746e14, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420498444432774602, guid: 77dacda4afccc24fd93ecd9475746e14, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420498444432774602, guid: 77dacda4afccc24fd93ecd9475746e14, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420498444432774602, guid: 77dacda4afccc24fd93ecd9475746e14, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420498444432774602, guid: 77dacda4afccc24fd93ecd9475746e14, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420498444432774602, guid: 77dacda4afccc24fd93ecd9475746e14, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246737256950911503, guid: 77dacda4afccc24fd93ecd9475746e14, type: 3}
+      propertyPath: m_Name
+      value: WaterDoor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77dacda4afccc24fd93ecd9475746e14, type: 3}
+--- !u!4 &9010527811763339600 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3420498444432774602, guid: 77dacda4afccc24fd93ecd9475746e14, type: 3}
+  m_PrefabInstance: {fileID: 5941336942521062554}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6996385561368193513
 PrefabInstance:
   m_ObjectHideFlags: 0
