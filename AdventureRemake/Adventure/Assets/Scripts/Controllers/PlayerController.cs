@@ -21,6 +21,10 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     public Vector3 moveDirection;
 
+    //Animator hashes
+    private readonly int _animIdle = Animator.StringToHash("DwarfAnimationIdle");
+    private readonly int _animBack = Animator.StringToHash("DwarfAnimationBack");
+
 
     private void Awake()
     {
@@ -55,6 +59,7 @@ public class PlayerController : MonoBehaviour
         {
             moveDirection.y = 0;
         }
+
         if (Keyboard.current.aKey.isPressed)
         {
             moveDirection.x = -1;
@@ -69,19 +74,28 @@ public class PlayerController : MonoBehaviour
         {
             moveDirection.x = 0;
         }
+        
+        if (moveDirection.sqrMagnitude > Mathf.Epsilon) // We are moving here
+        {
+            _anim.CrossFade("DwarfAnimationIdle", 0);
+        }
+        else // We are not moving here
+        {
+            _anim.CrossFade("DwarfAnimationBack", 0);
+        }
+
 
         //attack animation
         //la animacion tiene una duracion de 1 segundo y luego vuelve a idle
         if (Keyboard.current.jKey.wasPressedThisFrame)
         {
-            _anim.SetBool("isIdle", false);
             _anim.SetBool("isAttacking", true);
         }
-
         float horizontal = moveDirection.x;
         float vertical = moveDirection.y;
         moveDirection = new Vector3(horizontal, vertical, 0).normalized;
         _mv.MoveLinearVelocity(moveDirection, moveSpeed);
+
 
         //Consume Potions
         if (Keyboard.current.eKey.wasPressedThisFrame)
