@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Animations;
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private PlayerInventorySystem _pi;
     private Animator _anim;
     private SpriteRenderer _sr;
+    private bool _isAttacking = false;
 
     //Health variables
     public float maxHealth = 100;
@@ -20,10 +22,6 @@ public class PlayerController : MonoBehaviour
     //Movement variables
     public float moveSpeed = 5f;
     public Vector3 moveDirection;
-
-    //Animator hashes
-    private readonly int _animIdle = Animator.StringToHash("DwarfAnimationIdle");
-    private readonly int _animBack = Animator.StringToHash("DwarfAnimationBack");
 
 
     private void Awake()
@@ -47,27 +45,35 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         //Player movement
-        if (Keyboard.current.wKey.isPressed)
+        if (Keyboard.current.wKey.isPressed && _isAttacking == false)
         {
             moveDirection.y = 1;
+            _anim.SetFloat("Yinput", moveDirection.y);
+            _anim.SetFloat("Xinput", 0);
         }
-        else if (Keyboard.current.sKey.isPressed)
+        else if (Keyboard.current.sKey.isPressed && _isAttacking == false)
         {
             moveDirection.y = -1;
+            _anim.SetFloat("Yinput", moveDirection.y);
+            _anim.SetFloat("Xinput", 0);
         }
         else
         {
             moveDirection.y = 0;
         }
 
-        if (Keyboard.current.aKey.isPressed)
+        if (Keyboard.current.aKey.isPressed && _isAttacking == false)
         {
             moveDirection.x = -1;
+            _anim.SetFloat("Xinput", moveDirection.x);
+            _anim.SetFloat("Yinput", 0);
             _sr.flipX = true;
         }
-        else if (Keyboard.current.dKey.isPressed)
+        else if (Keyboard.current.dKey.isPressed && _isAttacking == false)
         {
             moveDirection.x = 1;
+            _anim.SetFloat("Xinput", moveDirection.x);
+            _anim.SetFloat("Yinput", 0);
             _sr.flipX = false;
         }
         else
@@ -75,27 +81,25 @@ public class PlayerController : MonoBehaviour
             moveDirection.x = 0;
         }
         
-        if (moveDirection.sqrMagnitude > Mathf.Epsilon) // We are moving here
-        {
-            _anim.CrossFade("DwarfAnimationIdle", 0);
-        }
-        else // We are not moving here
-        {
-            _anim.CrossFade("DwarfAnimationBack", 0);
-        }
-
-
-        //attack animation
-        //la animacion tiene una duracion de 1 segundo y luego vuelve a idle
-        if (Keyboard.current.jKey.wasPressedThisFrame)
-        {
-            _anim.SetBool("isAttacking", true);
-        }
-        float horizontal = moveDirection.x;
-        float vertical = moveDirection.y;
-        moveDirection = new Vector3(horizontal, vertical, 0).normalized;
+        moveDirection = new Vector3(moveDirection.x, moveDirection.y, 0).normalized;
         _mv.MoveLinearVelocity(moveDirection, moveSpeed);
 
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            _anim.SetFloat("Xinput", 1);
+            _anim.SetFloat("Yinput", 1);
+            _isAttacking = true;
+
+            IEnumerator ResetInputs()
+            {
+                yield return new WaitForSeconds(0.3f);
+                _anim.SetFloat("Xinput", 0);
+                _anim.SetFloat("Yinput", 0);
+                _isAttacking = false;
+            }
+
+            StartCoroutine(ResetInputs());
+        }
 
         //Consume Potions
         if (Keyboard.current.eKey.wasPressedThisFrame)
@@ -122,17 +126,4 @@ public class PlayerController : MonoBehaviour
     {
         return _pi;
     }   
-
-    private void OnEnable()
-    {
-        CollectibleSystem.GetCollectible += AddToInventory;
-    }
-    private void OnDisable()
-    {
-        CollectibleSystem.GetCollectible -= AddToInventory;
-    }
-    private void AddToInventory(string collectibleType, int amount, Sprite icon)
-    {
-        _pi.AddItem(collectibleType, amount, icon);
-    }
 }
