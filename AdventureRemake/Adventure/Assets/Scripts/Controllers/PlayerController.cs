@@ -44,82 +44,77 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+
         //Player movement
-        if (Keyboard.current.wKey.isPressed && _isAttacking == false)
-        {
-            moveDirection.y = 1;
-            _anim.SetFloat("Yinput", moveDirection.y);
-            _anim.SetFloat("Xinput", 0);
-        }
-        else if (Keyboard.current.sKey.isPressed && _isAttacking == false)
-        {
-            moveDirection.y = -1;
-            _anim.SetFloat("Yinput", moveDirection.y);
-            _anim.SetFloat("Xinput", 0);
-        }
-        else
-        {
-            moveDirection.y = 0;
-        }
+        Vector3 input1 = Vector3.zero;
+        var i = Keyboard.current;
 
-        if (Keyboard.current.aKey.isPressed && _isAttacking == false)
+        if (i != null)
         {
-            moveDirection.x = -1;
-            _anim.SetFloat("Xinput", moveDirection.x);
-            _anim.SetFloat("Yinput", 0);
-            _sr.flipX = true;
-        }
-        else if (Keyboard.current.dKey.isPressed && _isAttacking == false)
-        {
-            moveDirection.x = 1;
-            _anim.SetFloat("Xinput", moveDirection.x);
-            _anim.SetFloat("Yinput", 0);
-            _sr.flipX = false;
-        }
-        else
-        {
-            moveDirection.x = 0;
-        }
-        
-        moveDirection = new Vector3(moveDirection.x, moveDirection.y, 0).normalized;
-        _mv.MoveLinearVelocity(moveDirection, moveSpeed);
-
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            _anim.SetFloat("Xinput", 1);
-            _anim.SetFloat("Yinput", 1);
-            _isAttacking = true;
-
-            IEnumerator ResetInputs()
+            if (i.wKey.isPressed && !_isAttacking)
             {
-                yield return new WaitForSeconds(0.3f);
+                input1.y += 1;
+                _anim.SetFloat("Yinput", moveDirection.y);
                 _anim.SetFloat("Xinput", 0);
-                _anim.SetFloat("Yinput", 0);
-                _isAttacking = false;
             }
-
-            StartCoroutine(ResetInputs());
-        }
-
-        //Consume Potions
-        if (Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            if (_pi.HasItem("Potion"))
+            if (i.sKey.isPressed && !_isAttacking)
             {
-                bool removed = _pi.RemoveItem("Potion", 1);
-                if (removed)
+                input1.y -= 1;  
+                _anim.SetFloat("Yinput", moveDirection.y);
+                _anim.SetFloat("Xinput", 0);
+            }
+            if (i.aKey.isPressed && !_isAttacking)
+            {
+                input1.x -= 1;  
+                _anim.SetFloat("Xinput", moveDirection.x);
+                _anim.SetFloat("Yinput", 0);
+                _sr.flipX = true;
+            }
+            if (i.dKey.isPressed && !_isAttacking)
+            {
+                input1.x += 1;  
+                _anim.SetFloat("Xinput", moveDirection.x);
+                _anim.SetFloat("Yinput", 0);
+                _sr.flipX = false;
+            }
+            if (i.spaceKey.wasPressedThisFrame) //Attacking state
+            {
+                _anim.SetFloat("Xinput", 1);
+                _anim.SetFloat("Yinput", 1);
+                _isAttacking = true;
+
+                IEnumerator ResetInputs()
                 {
-                    _hs.Heal(50);
-                    currentHealth = _hs.GetCurrentHealth();
-                    _hb.setHealth(currentHealth);
-                    Debug.Log("Consumed a Potion. Current Health: " + currentHealth);
+                    yield return new WaitForSeconds(0.3f);
+                    _anim.SetFloat("Xinput", 0);
+                    _anim.SetFloat("Yinput", 0);
+                    _isAttacking = false;
+                }
+
+                StartCoroutine(ResetInputs());
+            }
+            if (i.eKey.isPressed) //Consume Potion
+            {
+                if (_pi.HasItem("Potion"))
+                {
+                    bool removed = _pi.RemoveItem("Potion", 1);
+                    if (removed)
+                    {
+                        _hs.Heal(50);
+                        currentHealth = _hs.GetCurrentHealth();
+                        _hb.setHealth(currentHealth);
+                        Debug.Log("Consumed a Potion. Current Health: " + currentHealth);
+                    }
                 }
             }
-            else
-            {
-                Debug.Log("No Potions in inventory.");
-            }
         }
+        else
+        {
+            input1 = Vector3.zero;
+        }
+
+        moveDirection = new Vector3(input1.x, input1.y, 0).normalized;
+        _mv.MoveLinearVelocity(moveDirection, moveSpeed);
     }
         
     public PlayerInventorySystem GetPlayerInventory()
