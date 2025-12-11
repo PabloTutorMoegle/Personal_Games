@@ -13,7 +13,11 @@ public class PlayerController : MonoBehaviour
     private PlayerInventorySystem _pi;
     private Animator _anim;
     private SpriteRenderer _sr;
+    private MeleeAttackSystem _ma;
     private bool _isAttacking = false;
+    private float attackTimer = 0.3f;
+    
+    public GameObject attackHitbox;
 
     //Health variables
     public float maxHealth = 100;
@@ -32,6 +36,7 @@ public class PlayerController : MonoBehaviour
         TryGetComponent<PlayerInventorySystem>(out _pi);
         TryGetComponent<Animator>(out _anim);
         TryGetComponent<SpriteRenderer>(out _sr);
+        TryGetComponent<MeleeAttackSystem>(out _ma);
     }
 
     private void Start()
@@ -68,24 +73,25 @@ public class PlayerController : MonoBehaviour
                 input1.x -= 1;  
                 _anim.SetFloat("Xinput", moveDirection.x);
                 _anim.SetFloat("Yinput", 0);
-                _sr.flipX = true;
+                transform.localScale = new Vector3(-1, 1, 1);
             }
             if (i.dKey.isPressed && !_isAttacking)
             {
                 input1.x += 1;  
                 _anim.SetFloat("Xinput", moveDirection.x);
                 _anim.SetFloat("Yinput", 0);
-                _sr.flipX = false;
+                transform.localScale = new Vector3(1, 1, 1);
             }
             if (i.spaceKey.wasPressedThisFrame) //Attacking state
             {
                 _anim.SetFloat("Xinput", 1);
                 _anim.SetFloat("Yinput", 1);
                 _isAttacking = true;
+                _ma.Attack(attackHitbox, attackTimer);
 
                 IEnumerator ResetInputs()
                 {
-                    yield return new WaitForSeconds(0.3f);
+                    yield return new WaitForSeconds(attackTimer);
                     _anim.SetFloat("Xinput", 0);
                     _anim.SetFloat("Yinput", 0);
                     _isAttacking = false;
