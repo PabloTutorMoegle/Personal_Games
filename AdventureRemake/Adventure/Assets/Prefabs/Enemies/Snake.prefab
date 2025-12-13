@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 9023185326841902379}
   - component: {fileID: 5957566211626268631}
   - component: {fileID: 4052734679120929519}
+  - component: {fileID: 6724876552157357916}
   m_Layer: 0
   m_Name: Snake
   m_TagString: Untagged
@@ -202,7 +203,19 @@ MonoBehaviour:
   health: 0
   OnChangeHealth:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6724876552157357916}
+        m_TargetAssemblyTypeName: ParticlesSystem, Assembly-CSharp
+        m_MethodName: PlayBloodParticles
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   UpdateHearts:
     m_PersistentCalls:
       m_Calls: []
@@ -321,6 +334,20 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fill: {fileID: 3840716068655799994}
+--- !u!114 &6724876552157357916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999946228253829938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef6f1e25313b18cdea6f2195291b22c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ParticlesSystem
+  hitParticle: {fileID: 288202312042078392, guid: 4c52526b672e530f1a0b371c7457db3c, type: 3}
+  healParticle: {fileID: 0}
 --- !u!1 &2300856269471088300
 GameObject:
   m_ObjectHideFlags: 0

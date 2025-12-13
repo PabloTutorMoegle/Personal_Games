@@ -7,7 +7,6 @@ public class SnakeController : MonoBehaviour
     //Health variables
     public float maxHealth = 50;
     public float currentHealth;
-    public static event System.Action SnakeDamage;
 
     private void Awake()
     {
@@ -24,14 +23,11 @@ public class SnakeController : MonoBehaviour
     private void Update()
     {
         currentHealth = _hs.GetCurrentHealth();
+        _hb.setHealth(currentHealth);
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("Snake Damage");
-        SnakeDamage?.Invoke();
-    }
+
 }

@@ -8,8 +8,6 @@ public class CamController : MonoBehaviour
     private Vector3 targetPos, newPos;
     public Vector3 minPos, maxPos;
 
-
-
     private void LateUpdate()
     {
         if (transform.position != player.position)

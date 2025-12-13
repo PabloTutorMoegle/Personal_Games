@@ -56,31 +56,43 @@ public class PlayerController : MonoBehaviour
 
         if (i != null)
         {
-            if (i.wKey.isPressed && !_isAttacking)
+            if (i.wKey.isPressed)
             {
                 input1.y += 1;
-                _anim.SetFloat("Yinput", moveDirection.y);
-                _anim.SetFloat("Xinput", 0);
+                if (!_isAttacking)
+                {
+                    _anim.SetFloat("Yinput", moveDirection.y);
+                    _anim.SetFloat("Xinput", 0);
+                }
             }
-            if (i.sKey.isPressed && !_isAttacking)
+            if (i.sKey.isPressed)
             {
                 input1.y -= 1;  
-                _anim.SetFloat("Yinput", moveDirection.y);
-                _anim.SetFloat("Xinput", 0);
+                if (!_isAttacking)
+                {
+                    _anim.SetFloat("Yinput", moveDirection.y);
+                    _anim.SetFloat("Xinput", 0);
+                }
             }
-            if (i.aKey.isPressed && !_isAttacking)
+            if (i.aKey.isPressed)
             {
                 input1.x -= 1;  
-                _anim.SetFloat("Xinput", moveDirection.x);
-                _anim.SetFloat("Yinput", 0);
-                transform.localScale = new Vector3(-1, 1, 1);
+                if (!_isAttacking)
+                {
+                    _anim.SetFloat("Xinput", moveDirection.x);
+                    _anim.SetFloat("Yinput", 0);
+                    transform.localScale = new Vector3(-1, 1, 1);
+                }
             }
-            if (i.dKey.isPressed && !_isAttacking)
+            if (i.dKey.isPressed)
             {
                 input1.x += 1;  
-                _anim.SetFloat("Xinput", moveDirection.x);
-                _anim.SetFloat("Yinput", 0);
-                transform.localScale = new Vector3(1, 1, 1);
+                if (!_isAttacking)
+                {
+                    _anim.SetFloat("Xinput", moveDirection.x);
+                    _anim.SetFloat("Yinput", 0);
+                    transform.localScale = new Vector3(1, 1, 1);
+                }
             }
             if (i.spaceKey.wasPressedThisFrame) //Attacking state
             {
