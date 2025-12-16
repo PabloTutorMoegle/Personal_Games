@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5154436240309514207}
   - component: {fileID: 4917862834815717051}
   - component: {fileID: 4441822490124383481}
+  - component: {fileID: -8466798111144945171}
   m_Layer: 0
   m_Name: Castle
   m_TagString: Untagged
@@ -178,3 +179,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e18079b49bc0ef69dc9f837666c337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CastleController
+--- !u!114 &-8466798111144945171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5988751146397435439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea43b30181e49112b65cdff4f35a342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneChangeSystem
+  sceneName: Complete

@@ -2,7 +2,13 @@ using UnityEngine;
 
 public class CastleController : MonoBehaviour
 {
-    public static event System.Action GameFinished;
+    private SceneChangeSystem _sceneChangeSystem;
+
+    private void Awake()
+    {
+        TryGetComponent<SceneChangeSystem>(out _sceneChangeSystem);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -16,7 +22,7 @@ public class CastleController : MonoBehaviour
             if (hasItems)
             {
                 Debug.Log("Player has reached the castle with required items. Game Finished!");
-                GameFinished?.Invoke();
+                _sceneChangeSystem.GoToScene();
             }
             else
             {
@@ -24,4 +30,6 @@ public class CastleController : MonoBehaviour
             }
         }
     }
+
+
 }
