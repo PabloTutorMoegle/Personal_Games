@@ -13,7 +13,8 @@ public class HealthSystem : MonoBehaviour
     [SerializeField]
     private float health;
 
-    public UnityEvent<float> OnChangeHealth;
+    public UnityEvent<float> OnChangeHealHealth;
+    public UnityEvent<float> OnChangeHurtHealth;
     public UnityEvent<float> UpdateHearts;
 
     public UnityEvent OnZeroLifes;
@@ -46,7 +47,7 @@ public class HealthSystem : MonoBehaviour
     public void Hurt(float damage)
     {
         health -= damage;
-        OnChangeHealth.Invoke(health);
+        OnChangeHurtHealth.Invoke(health);
         if (health <= 0)
         {
             health = 0;
@@ -64,6 +65,6 @@ public class HealthSystem : MonoBehaviour
         {
             health += heal;
         }
-        OnChangeHealth.Invoke(health);
+        OnChangeHealHealth.Invoke(health);
     }
 }

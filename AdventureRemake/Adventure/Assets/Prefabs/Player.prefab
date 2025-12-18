@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 5949617377332318566}
   - component: {fileID: 841488794295748656}
   - component: {fileID: 3297294332191260050}
+  - component: {fileID: 4051546606450375696}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -221,9 +222,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
   maxhealth: 0
   health: 0
-  OnChangeHealth:
+  OnChangeHealHealth:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 4051546606450375696}
+        m_TargetAssemblyTypeName: ParticlesSystem, Assembly-CSharp
+        m_MethodName: PlayHealParticles
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7598789810565654943}
+        m_TargetAssemblyTypeName: HealthBarSystem, Assembly-CSharp
+        m_MethodName: setHealth
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnChangeHurtHealth:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4051546606450375696}
+        m_TargetAssemblyTypeName: ParticlesSystem, Assembly-CSharp
+        m_MethodName: PlayBloodParticles
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 7598789810565654943}
         m_TargetAssemblyTypeName: HealthBarSystem, Assembly-CSharp
         m_MethodName: setHealth
@@ -243,8 +283,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3297294332191260050}
-        m_TargetAssemblyTypeName: GameOverSystem, Assembly-CSharp
-        m_MethodName: GameOver
+        m_TargetAssemblyTypeName: SceneChangeSystem, Assembly-CSharp
+        m_MethodName: GoToScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -417,6 +457,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameOverSystem
   sceneName: Menu
+--- !u!114 &4051546606450375696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3853320227658335203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef6f1e25313b18cdea6f2195291b22c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ParticlesSystem
+  hitParticle: {fileID: 288202312042078392, guid: 4c52526b672e530f1a0b371c7457db3c, type: 3}
+  healParticle: {fileID: 6283852398627100617, guid: 0623bd1c40d36451e9d04d427c38d934, type: 3}
 --- !u!1 &7060613270337592944
 GameObject:
   m_ObjectHideFlags: 0

@@ -201,7 +201,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
   maxhealth: 0
   health: 0
-  OnChangeHealth:
+  OnChangeHealHealth:
+    m_PersistentCalls:
+      m_Calls: []
+  OnChangeHurtHealth:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6724876552157357916}
@@ -289,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27906ac5fd2828936bcc2c21e939726b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageSystem
-  damageAmount: 50
+  damageAmount: 10
 --- !u!114 &4052734679120929519
 MonoBehaviour:
   m_ObjectHideFlags: 0

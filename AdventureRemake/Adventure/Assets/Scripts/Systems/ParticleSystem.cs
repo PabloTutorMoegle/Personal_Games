@@ -32,4 +32,8 @@ public class ParticlesSystem : MonoBehaviour
     {
         _instance = Instantiate(hitParticle, transform.position, Quaternion.identity);
     }
+    public void PlayHealParticles()
+    {
+        _instance = Instantiate(healParticle, transform.position, Quaternion.identity);
+    }
 }

@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private Animator _anim;
     private SpriteRenderer _sr;
     private MeleeAttackSystem _ma;
+    private ParticleSystem _ps;
+
     private bool _isAttacking = false;
     private float attackTimer = 0.3f;
     
@@ -37,6 +39,7 @@ public class PlayerController : MonoBehaviour
         TryGetComponent<Animator>(out _anim);
         TryGetComponent<SpriteRenderer>(out _sr);
         TryGetComponent<MeleeAttackSystem>(out _ma);
+        TryGetComponent<ParticleSystem>(out _ps);
     }
 
     private void Start()
@@ -121,7 +124,6 @@ public class PlayerController : MonoBehaviour
                         _hs.Heal(50);
                         currentHealth = _hs.GetCurrentHealth();
                         _hb.setHealth(currentHealth);
-                        Debug.Log("Consumed a Potion. Current Health: " + currentHealth);
                     }
                 }
             }
