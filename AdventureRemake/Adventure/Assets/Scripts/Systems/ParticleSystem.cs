@@ -24,7 +24,7 @@ public class ParticlesSystem : MonoBehaviour
         {
             ParticleSystem particle = Instantiate(healParticle, position, Quaternion.identity);
             particle.Play();
-            Destroy(particle.gameObject, particle.main.duration + particle.main.startLifetime.constantMax);
+            Destroy(particle.gameObject, particle.main.duration + particle.main.startLifetime.constantMax);                
         }
     }
 

@@ -141,4 +141,13 @@ public class PlayerController : MonoBehaviour
     {
         return _pi;
     }   
+
+    public float GetCurrentHealth()
+    {
+        return _hs.GetCurrentHealth();
+    }
+    public float GetMaxHealth()
+    {
+        return _hs.GetMaxHealth();
+    }
 }
